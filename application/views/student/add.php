@@ -15,7 +15,7 @@
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="name">Student Name</label>
-      <input type="text" name="name" class="form-control" value="<?php if(!empty($editData)) echo $editData->name?>" id="name">
+      <input type="text" name="name" class="form-control" value="<?php if(!empty($editData)) echo $editData->name?>" id="name" required>
     </div>
     <input type="hidden" name="id" value="<?php if(!empty($editData)) echo $editData->id?>">
     <div class="form-group col-md-6">
@@ -30,7 +30,7 @@
     </div>
     <div class="form-group col-md-6">
       <label for="phone">Mobile</label>
-      <input type="text" name="phone" class="form-control" value="<?php if(!empty($editData)) echo $editData->phone?>" id="mobile">
+      <input type="text" name="phone" class="form-control" value="<?php if(!empty($editData)) echo $editData->phone?>" id="mobile" required>
     </div>
   </div>
   <div class="form-row">

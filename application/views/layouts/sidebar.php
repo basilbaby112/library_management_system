@@ -70,8 +70,8 @@
         <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Links</h6>
             <!-- <a class="collapse-item" href="utilities-color.html">Blog</a> -->
-            <a class="collapse-item" href="">View Book Details</a>
-            <a class="collapse-item" href="">Add Book</a>
+            <a class="collapse-item" href="<?php echo base_url()?>Books/list">View Book Details</a>
+            <a class="collapse-item" href="<?php echo base_url()?>Books/add">Add Book</a>
         </div>
     </div>
 </li>
