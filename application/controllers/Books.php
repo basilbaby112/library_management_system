@@ -11,7 +11,6 @@ class Books extends CI_Controller {
         redirect('Login');
 
         $this->load->model('General_model');
-        // $this->load->library('Fileupload');
 
     }
     public function list(){

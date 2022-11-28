@@ -9,6 +9,24 @@ class General_model extends CI_Model {
         ->get()->result();
     }
 
+    public function list_book_hand($table){
+
+        return $this->db->select('*')
+         ->from($table)
+         ->where('stock',1)
+         ->where('status',1)
+         ->get()->result();
+     }
+
+     public function list_issue($table1,$table2,$table3){
+        return $this->db->select($table2.'.name as stname,'.$table3.'.name as bname,'.$table1.'.*')
+        ->from($table1)
+        ->join($table2,$table1.'.student='.$table2.'.id')
+        ->join($table3,$table1.'.book='.$table3.'.id')
+        ->where($table1.'.status',1)
+        ->get()->result();
+     }
+
     public function add($data,$table){
 
         $this->db->insert($table,$data);
